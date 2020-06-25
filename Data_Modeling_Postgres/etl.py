@@ -9,9 +9,13 @@ from sql_queries import *
 
 def process_song_file(cur, filepath) -> object:
     """
+    This procedure processes a song file whose filepath has been provided as an argument.
+    It extracts the song information in order to store it into the songs table.
+    Then it extracts the artist information in order to store it into the artists table.
 
-    @param cur:
-    @param filepath:
+    INPUTS:
+    * cur the cursor variable
+    * filepath the file path to the song file
     """
     # open song file
     df = pd.read_json(filepath, lines=True)
@@ -30,10 +34,16 @@ def process_song_file(cur, filepath) -> object:
 
 def process_log_file(cur, filepath):
     """
+    This procedure processes a log file whose filepath has been provided as an argument,
+    It extracts the user log information and converts the time to a different format and
+    pushes data to the time table and with the help of song and artist tables, it fetches the
+    song played info and stores it into the songsplay table
 
-    @param cur:
-    @param filepath:
+    INPUTS:
+    * cur the cursor variable
+    * filepath the file path to the song file
     """
+
     # open log file
     df = pd.read_json(filepath, lines=True)
 
@@ -86,12 +96,16 @@ def process_log_file(cur, filepath):
 
 def process_data(cur, conn, filepath, func):
     """
+    This procedure is responsible for processing data, gets the json and log files
+    and combines them for further processing
 
-    @param cur:
-    @param conn:
-    @param filepath:
-    @param func:
+    INPUTS:
+    * cur the cursor variable
+    * conn the postgres connection
+    * filepath the file path to the song file
+    * func identifies the function to execute
     """
+
     # get all files matching extension from directory
     all_files = []
     for root, dirs, files in os.walk(filepath):

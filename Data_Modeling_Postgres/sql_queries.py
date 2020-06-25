@@ -26,8 +26,8 @@ user_table_create = ("""
     user_id int PRIMARY KEY NOT NULL, 
     first_name text NOT NULL, 
     last_name text, 
-    gender text,  l
-    evel text)
+    gender text,  
+    level text)
     """)
 
 song_table_create = ("""

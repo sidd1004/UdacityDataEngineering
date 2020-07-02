@@ -72,7 +72,7 @@ To improve the performance we will be use a STAR schema. This schema consists of
 - year (INT): Year number of start_time
 - weekday (INT): Number of the week of start_time
 
-# How to run process
+## How to run
 1. Start up a AWS Redshift Cluster
 - Make sure to setup the IAM role to AmazonS3ReadOnlyAccess.
 - Create a dc2.large cluster with 4 nodes.

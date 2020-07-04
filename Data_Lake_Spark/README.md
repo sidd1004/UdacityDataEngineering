@@ -6,9 +6,6 @@ A music streaming startup, Sparkify, has grown their user base and song database
 
 ## Dataset from S3 buckets:
 
-Song Data: s3://udacity-dend/song_data 
-Log Data Path: s3://udacity-dend/log_data 
-
 ### Source Data
 - **Song datasets**: all files are found in S3 under *s3a://udacity-dend/song_data*. Sample data:
 

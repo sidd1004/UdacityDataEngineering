@@ -19,7 +19,7 @@ A music streaming startup, Sparkify, has grown their user base and song database
 
 ### Fact Table
 
-<b>songplays_table<b> - records in event logs based on song plays. Contains data with page NextSong and columns songplay_id, start_time, month, year, user_id, level, song_id, artist_id, session_id, location, user_agent
+<b>songplays_table</b> - records in event logs based on song plays. Contains data with page NextSong and columns songplay_id, start_time, month, year, user_id, level, song_id, artist_id, session_id, location, user_agent
 
 <b>Dimension Tables</b>
 

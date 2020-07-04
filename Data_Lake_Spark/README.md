@@ -41,3 +41,7 @@ The files are as follows:
 - dl_config.cfg: File with AWS credentials (To be filled with your credentials and renamed as `dl.cfg` not to be committed to Github).
 - etl.py: File that contains the script to extract the songs and log data from S3 and transforms using Spark, and to load it to the dimensional tables created in parquet format to S3.
 - README.md: Information about the project.
+
+## How to Run the project: 
+1.Insert your AWS IAM credentials in dl_config.cfg file and rename to dl.clg.
+2.Run `python etl.py` in the terminal.

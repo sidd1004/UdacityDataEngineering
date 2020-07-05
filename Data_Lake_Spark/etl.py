@@ -114,7 +114,7 @@ def process_log_data(spark, input_data, output_data):
     users_table.write.mode('overwrite').parquet(output_data + 'users_table/')
 
     date_time_table = spark.sql("""
-                                SELECT 
+                                SELECT DISTINCT
                                     timedata.t as start_time,
                                     hour (timedata.t) as hour,
                                     dayofmonth (timedata.t) as day,

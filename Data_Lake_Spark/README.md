@@ -6,9 +6,6 @@ A music streaming startup, Sparkify, has grown their user base and song database
 
 ## Dataset from S3 buckets:
 
-Song Data: s3://udacity-dend/song_data 
-Log Data Path: s3://udacity-dend/log_data 
-
 ### Source Data
 - **Song datasets**: all files are found in S3 under *s3a://udacity-dend/song_data*. Sample data:
 
@@ -22,7 +19,7 @@ Log Data Path: s3://udacity-dend/log_data
 
 ### Fact Table
 
-- songplays_table - records in event logs based on song plays. Contains data with page NextSong and columns songplay_id, start_time, month, year, user_id, level, song_id, artist_id, session_id, location, user_agent
+<b>songplays_table</b> - records in event logs based on song plays. Contains data with page NextSong and columns songplay_id, start_time, month, year, user_id, level, song_id, artist_id, session_id, location, user_agent
 
 <b>Dimension Tables</b>
 
@@ -41,3 +38,7 @@ The files are as follows:
 - dl_config.cfg: File with AWS credentials (To be filled with your credentials and renamed as `dl.cfg` not to be committed to Github).
 - etl.py: File that contains the script to extract the songs and log data from S3 and transforms using Spark, and to load it to the dimensional tables created in parquet format to S3.
 - README.md: Information about the project.
+
+## How to Run the project: 
+1.Insert your AWS IAM credentials in dl_config.cfg file and rename to dl.clg.
+2.Run `python etl.py` in the terminal.
